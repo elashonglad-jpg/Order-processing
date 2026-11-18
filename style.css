@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #333;
+}
+
+/* Header */
+
+header {
+    background: #ea580c;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+/* Main layout */
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 25px;
+}
+
+/* Cards */
+
+.order-card,
+.tracking-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #222;
+}
+
+/* Form */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+/* Buttons */
+
+button {
+    width: 100%;
+    padding: 13px;
+    background: #ea580c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #c2410c;
+}
+
+button:disabled {
+    background: #999;
+    cursor: not-allowed;
+}
+
+.secondary-btn {
+    background: #333;
+    margin-top: 15px;
+}
+
+.secondary-btn:hover {
+    background: #555;
+}
+
+/* Order details */
+
+.order-details {
+    background: #fff7ed;
+    padding: 15px;
+    border-radius: 6px;
+    margin: 20px 0;
+    line-height: 1.8;
+}
+
+#welcomeMessage {
+    color: #777;
+}
+
+/* Progress timeline */
+
+.progress-container {
+    margin-top: 25px;
+}
+
+.progress-step {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    opacity: 0.4;
+}
+
+.step-number {
+    min-width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.progress-step h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.progress-step p {
+    font-size: 13px;
+    color: #777;
+}
+
+/* Active and completed steps */
+
+.progress-step.active {
+    opacity: 1;
+}
+
+.progress-step.active .step-number {
+    background: #ea580c;
+    color: white;
+}
+
+.progress-step.completed {
+    opacity: 1;
+}
+
+.progress-step.completed .step-number {
+    background: #16a34a;
+    color: white;
+}
+
+.status-message {
+    background: #f0fdf4;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 15px;
+    color: #166534;
+    text-align: center;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+
+/* Mobile responsiveness */
+
+@media (max-width: 700px) {
+
+    .container {
+        grid-template-columns: 1fr;
+        margin: 20px auto;
+    }
+
+}

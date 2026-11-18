@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Processing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>QuickBite</h1>
+        <p>Fresh food, delivered to you</p>
+    </header>
+    <main class="container">
+        <section class="order-card">
+            <h2>Place your Order</h2>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="Customer Name">Customer Name</label>
+                    <input type="text" id="customerName" placeholder="Enter Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="food">Select your meal</label>
+                    <select id="food">
+                        <option value="">Choose your meal</option>
+                        <option value="Chicken and Chips">Chicken and Chips - KES 450</option>
+                        <option value="Beef Burger">Beef Burger - KES 350</option>
+                        <option value="Pizza">Pizza - KES 800</option>
+                        <option value="Chips">Chips - KES 150</option>
+                    </select>
+                </div>
+                <button type="submit" id="orderBtn">Place your order</button>
+            </form>
+
+        </section>
+
+        <!--Order tracking-->
+        <section class="tracking-card">
+            <h1>Order Tracking</h1>
+            <div id="welcomeMessage">
+                Your order will appear here
+            </div>
+            <div class="order-details" id="orderDetails">
+                <p><strong>Customer:</strong><span id="displayName">-</span></p>
+                <p><strong>Meal:</strong><span id="displayFood">-</span></p>
+            </div>
+            <div class="progress-container">
+                <div class="progress-step" id="step1">
+                    <span class="step-number">1</span>
+                    <div>
+                        <h3>Order Recieved</h3>
+                        <p>Waiting for order Confirmation</p>
+                    </div>
+                </div>
+                <div class="progress-step" id="step2">
+                    <span class="step-number">2</span>
+
+                    <div>
+                        <h3>Payment Processing</h3>
+                        <p>Confirming your payment</p>
+                    </div>
+                </div>
+                <div class="progress-step" id="step3">
+                    <span class="step-number">3</span>
+                    <div>
+                        <h3>Preparing Food</h3>
+                        <p>Our Chef is Preparing you meal</p>
+                    </div>
+                </div>
+
+                <div class="progress-step" id="step4">
+                    <span class="step-number">4</span>
+
+                    <div>
+                        <h3>Ready for Delivery</h3>
+                        <p>Your order is ready</p>
+                    </div>
+                </div>
+
+                <div class="progress-step" id="step5">
+                    <span class="step-number">5</span>
+
+                    <div>
+                        <h3>Delivered</h3>
+                        <p>Enjoy your meal!</p>
+                    </div>
+                </div>
+            </div>
+            <p id="statusMessage" class="status-message">
+                No active order
+            </p>
+            <button id="newOrderBtn" class="secondary-btn" hidden>
+                Place Another Order
+            </button>
+        </section>
+
+    </main>
+    <footer>
+        <p>QuickBite &copy; 2026. Made by Ken for learning JavaScript.</p>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
